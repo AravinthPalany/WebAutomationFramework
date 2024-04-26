@@ -10,7 +10,7 @@ import org.testng.Assert;
 
 public class TestVWOLoginPOMBaseTest extends CommonToAllTest {
 
-    @Test(groups = "reg")
+    @Test(groups = {"reg"}, priority = 2)
     public void testLoginNegative() {
 
         LoginPage_POM loginPagePom = new LoginPage_POM();
@@ -27,7 +27,7 @@ public class TestVWOLoginPOMBaseTest extends CommonToAllTest {
                 .contains(PropertyReader.readyKey("error_message"));
     }
 
-    @Test(groups = "smoke" , priority = 2)
+    @Test(groups = {"smoke"} , priority = 1)
     public void testLoginPositive() {
         LoginPage_POM loginPagePom = new LoginPage_POM();
         loginPagePom.openVWOLoginURL();
